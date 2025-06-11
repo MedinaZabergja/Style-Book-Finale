@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BookStyle | Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="home.html" class="logo">BookStyle</a>
+    <div class="nav-links">
+      <a href="ootw.html">OOTW</a>
+      <a href="search.html">Search</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </nav>
+
+<div class="profile-container">
+  <div class="profile-header">
+    <div class="avatar-container">
+      <label for="avatar-upload" class="avatar" id="avatar-display"></label>
+      <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+    </div>
+    <h2>Welcome, Your Name</h2>
+    <p>@yourusername</p>
+  </div>
+
+    <div class="outfits">
+      <h3>Your Saved Outfits</h3>
+      <div class="outfit-item"onclick="window.open('https://www.pinterest.com/swordartoffline_/spring-picnic-outfits/', '_blank')">✨ Spring Picnic Outfit</div>
+      <div class="outfit-item"onclick="window.open('https://www.pinterest.com/swordartoffline_/monochrome-street-look/')">🖤 Monochrome Street Look</div>
+      <div class="outfit-item"onclick="window.open('https://www.pinterest.com/swordartoffline_/rainy-day-essentials/')">🌧️ Rainy Day Essentials</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+<script>
+  document.getElementById('avatar-upload').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const avatar = document.getElementById('avatar-display');
+        avatar.style.backgroundImage = `url(${event.target.result})`;
+        localStorage.setItem('avatar', event.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  window.addEventListener('DOMContentLoaded', function() {
+    // Load saved avatar if exists
+    const savedAvatar = localStorage.getItem('avatar');
+    if (savedAvatar) {
+      document.getElementById('avatar-display').style.backgroundImage = `url(${savedAvatar})`;
+    }
+
+    // Load user name and username
+    const fullName = localStorage.getItem('userFullName') || 'Your Name';
+    const username = localStorage.getItem('userUsername') || 'yourusername';
+
+    // Replace name and username in the DOM
+    document.querySelector('.profile-header h2').textContent = `Welcome, ${fullName}`;
+    document.querySelector('.profile-header p').textContent = `@${username}`;
+  });
+</script>
+
+</body>
+</html>

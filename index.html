@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BookStyle | Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fcfafa;
+      color: #444;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #4a4a4a;
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #4a4a4a;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .main-content h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #3e3e3e;
+    }
+
+    .main-content h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+
+    .clothing-link {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease;
+    }
+
+    .clothing-link:hover {
+      transform: scale(1.03);
+    }
+
+    .clothing-image {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-top: 1.5rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 1.2rem;
+      text-align: center;
+      background-color: #f0f0f0;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="home.html" class="logo">BookStyle</a>
+    <div class="nav-links">
+      <a href="ootw.html">OOTW</a>
+      <a href="search.html">Search</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <h1>Welcome Back to BookStyle 👋</h1>
+    <h2>Your weekly dose of cozy fashion inspiration</h2>
+
+    <a href="outfit-details.html" class="clothing-link">
+      <img 
+        src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80"
+        alt="Stylish outfit"
+        class="clothing-image"
+      />
+    </a>
+
+    <p class="description">
+      This week’s favorite: a warm, layered look perfect for breezy days and coffee strolls.  
+      A gentle mix of textur
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BookStyle | Outfits of the Week</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to right, #8ec5fc, #e0c3fc);
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.8;
+    }
+
+    .main-content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .main-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #5a4b8b;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* Outfit grid */
+    .outfit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .outfit-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .outfit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .outfit-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-bottom: 3px solid #8ec5fc;
+      transition: opacity 0.3s ease;
+    }
+
+    .outfit-image:hover {
+      opacity: 0.9;
+    }
+
+    .outfit-content {
+      padding: 1rem 1.5rem 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .outfit-description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .model-info {
+      font-weight: 600;
+      color: #5a4b8b;
+      text-decoration: none; /* no underline */
+      transition: color 0.2s;
+      display: inline-block;
+    }
+
+    .model-info:hover {
+      color: #8ec5fc;
+      /* no underline on hover either */
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      text-align: center;
+      background-color: #ececec;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-links a {
+        margin-left: 0;
+        margin-top: 0.5rem;
+      }
+      .outfit-image {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="home.html" class="logo">BookStyle</a>
+    <div class="nav-links">
+      <a href="ootw.html">OOTW</a>
+      <a href="search.html">Search</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <h2>Outfits of the Week</h2>
+    
+    <div class="outfit-grid">
+
+      <a href="outfit-details.html?outfit=1" class="outfit-card" aria-label="View details of Bella Hadid's outfit">
+        <img
+          src="bellagetty.avif"
+          alt="Bella Hadid wearing a cozy chic layered outfit"
+          class="outfit-image"
+        />
+        <div class="outfit-content">
+          <p class="outfit-description">
+            Bella Hadid channels effortless city chic in a fitted off-shoulder brown top paired with light-wash, low-rise jeans. She elevates the look with narrow Y2K sunglasses, a chunky belt, and a slouchy vintage leather jacket draped casually in hand—balancing timeless cool with modern minimalism.
+          </p>
+          <a href="https://instagram.com/bellahadid" target="_blank" rel="noopener" class="model-info">@bellahadid</a>
+        </div>
+      </a>
+
+      <a href="outfit-details.html?outfit=2" class="outfit-card" aria-label="View details of Dua Lipa's outfit">
+        <img
+          src="IMG_2314.jpeg"
+          alt="Dua Lipa wearing a casual street style outfit"
+          class="outfit-image"
+        />
+        <div class="outfit-content">
+          <p class="outfit-description">
+            Dua Lipa is seen in a sheer purple dress with voluminous sleeves and delicate ruffle details, paired with blaack boots and minimal accessories -an edgy yet polished look that blends vintage glamour with modern sensuality.
+          </p>
+          <a href="https://instagram.com/dualipa" target="_blank" rel="noopener" class="model-info">@dualipa</a>
+        </div>
+      </a>
+
+      <a href="outfit-details.html?outfit=3" class="outfit-card" aria-label="View details of Alex Consani's outfit">
+        <img
+          src="IMG_2315.jpeg"
+          alt="Alex Consani in a sleek modern outfit with minimalist design"
+          class="outfit-image"
+        />
+        <div class="outfit-content">
+          <p class="outfit-description">
+            Alex Consani poses with black heels in a barely-there black slip dress with thin straps and subtle lace trim, creating an intimate, undone vibe that feels raw, moody, and high-fashion at once.
+          </p>
+          <a href="https://instagram.com/alexconsani" target="_blank" rel="noopener" class="model-info">@alexconsani</a>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 BookStyle. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
